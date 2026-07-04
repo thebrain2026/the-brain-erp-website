@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 96" role="img" aria-labelledby="title desc">
+  <title id="title">Life Laying Farm Private Limited logo</title>
+  <desc id="desc">A compact poultry farm logo with an egg, leaf, and farm line.</desc>
+  <defs>
+    <linearGradient id="lifeBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00b8ff"/>
+      <stop offset="1" stop-color="#ff931e"/>
+    </linearGradient>
+    <linearGradient id="lifeEgg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#d8f5ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="96" rx="18" fill="#071126"/>
+  <rect x="5" y="5" width="150" height="86" rx="15" fill="none" stroke="url(#lifeBg)" stroke-width="3"/>
+  <path d="M34 62c13-16 25-25 46-25s34 9 47 25" fill="none" stroke="#47f0a9" stroke-width="5" stroke-linecap="round"/>
+  <path d="M71 61c-10-10-9-29 9-42 18 13 19 32 9 42-5 5-13 5-18 0z" fill="url(#lifeEgg)" stroke="#ffffff" stroke-width="2"/>
+  <path d="M84 35c14-11 28-11 39-1-10 12-24 14-39 1z" fill="#47f0a9"/>
+  <path d="M50 64h60" stroke="#ff931e" stroke-width="5" stroke-linecap="round"/>
+  <text x="80" y="82" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="13" font-weight="800">LIFE LAYING</text>
+</svg>

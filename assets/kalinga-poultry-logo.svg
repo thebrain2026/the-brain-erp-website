@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 96" role="img" aria-label="Kalinga Poultry Farm logo">
+  <rect width="160" height="96" rx="18" fill="#071126"/>
+  <rect x="5" y="5" width="150" height="86" rx="15" fill="none" stroke="#ff931e" stroke-width="3"/>
+  <path d="M38 63h84" stroke="#47f0a9" stroke-width="5" stroke-linecap="round"/>
+  <path d="M55 62c2-18 17-31 37-31 16 0 29 12 32 31H55z" fill="#ffffff"/>
+  <path d="M92 31l11-11 5 15" fill="#ff4f4f"/>
+  <path d="M121 44l13 7-13 7z" fill="#ff931e"/>
+  <path d="M58 72h48" stroke="#00b8ff" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="101" cy="42" r="3" fill="#071126"/>
+  <text x="80" y="88" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="800">KALINGA</text>
+</svg>

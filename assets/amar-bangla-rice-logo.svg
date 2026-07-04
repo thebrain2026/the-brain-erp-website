@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 96" role="img" aria-label="Amar Bangla Rice Mill logo">
+  <rect width="160" height="96" rx="18" fill="#071126"/>
+  <rect x="5" y="5" width="150" height="86" rx="15" fill="none" stroke="#47f0a9" stroke-width="3"/>
+  <path d="M38 54l42-26 42 26" fill="none" stroke="#ff931e" stroke-width="6" stroke-linecap="round"/>
+  <rect x="48" y="54" width="64" height="22" rx="4" fill="#ffffff"/>
+  <path d="M60 63h40M60 70h32" stroke="#071126" stroke-width="3" stroke-linecap="round"/>
+  <path d="M80 22c-12 15-9 29 0 42 9-13 12-27 0-42z" fill="#47f0a9"/>
+  <text x="80" y="89" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="800">AMAR BANGLA</text>
+</svg>

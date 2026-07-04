@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 96" role="img" aria-labelledby="title desc">
+  <title id="title">English medium school client logo</title>
+  <desc id="desc">A compact school-style logo with a book and academic shield.</desc>
+  <defs>
+    <linearGradient id="schoolStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00b8ff"/>
+      <stop offset="1" stop-color="#ff931e"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="96" rx="18" fill="#071126"/>
+  <rect x="5" y="5" width="150" height="86" rx="15" fill="none" stroke="url(#schoolStroke)" stroke-width="3"/>
+  <path d="M80 18l35 12v24c0 18-13 29-35 36-22-7-35-18-35-36V30l35-12z" fill="#0d1933" stroke="#66d9ff" stroke-width="3"/>
+  <path d="M52 42c15-5 26-4 28 4 2-8 13-9 28-4v25c-14-5-25-4-28 4-3-8-14-9-28-4V42z" fill="#ffffff"/>
+  <path d="M80 46v25" stroke="#00b8ff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M58 50h15M58 58h14M87 50h15M88 58h14" stroke="#071126" stroke-width="2" stroke-linecap="round"/>
+  <text x="80" y="85" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="800">SCHOOL</text>
+</svg>

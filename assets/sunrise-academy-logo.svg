@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 96" role="img" aria-label="Sunrise English Academy logo">
+  <rect width="160" height="96" rx="18" fill="#071126"/>
+  <rect x="5" y="5" width="150" height="86" rx="15" fill="none" stroke="#00b8ff" stroke-width="3"/>
+  <path d="M45 62a35 35 0 0170 0" fill="#ff931e"/>
+  <path d="M36 62h88" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  <path d="M52 72h56" stroke="#47f0a9" stroke-width="4" stroke-linecap="round"/>
+  <path d="M80 20v12M58 28l7 10M102 28l-7 10M39 44l11 5M121 44l-11 5" stroke="#ffbf3f" stroke-width="4" stroke-linecap="round"/>
+  <text x="80" y="88" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="800">SUNRISE</text>
+</svg>

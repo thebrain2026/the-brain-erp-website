@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 96" role="img" aria-label="Kids English School logo">
+  <rect width="160" height="96" rx="18" fill="#071126"/>
+  <rect x="5" y="5" width="150" height="86" rx="15" fill="none" stroke="#47f0a9" stroke-width="3"/>
+  <circle cx="58" cy="39" r="14" fill="#00b8ff"/>
+  <circle cx="102" cy="39" r="14" fill="#ff931e"/>
+  <path d="M41 70c7-14 26-14 34 0M85 70c7-14 26-14 34 0" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+  <path d="M66 61h28" stroke="#47f0a9" stroke-width="5" stroke-linecap="round"/>
+  <text x="80" y="88" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="800">KIDS SCHOOL</text>
+</svg>

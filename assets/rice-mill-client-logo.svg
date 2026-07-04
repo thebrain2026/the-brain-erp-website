@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 96" role="img" aria-labelledby="title desc">
+  <title id="title">Rice mill client logo</title>
+  <desc id="desc">A compact rice mill logo with grain, mill roof, and stock lines.</desc>
+  <defs>
+    <linearGradient id="riceStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00b8ff"/>
+      <stop offset="1" stop-color="#ff931e"/>
+    </linearGradient>
+  </defs>
+  <rect width="160" height="96" rx="18" fill="#071126"/>
+  <rect x="5" y="5" width="150" height="86" rx="15" fill="none" stroke="url(#riceStroke)" stroke-width="3"/>
+  <path d="M39 51l41-25 41 25" fill="none" stroke="#ff931e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M48 51h64v24H48z" fill="#ffffff"/>
+  <path d="M58 60h44M58 68h44" stroke="#071126" stroke-width="3" stroke-linecap="round"/>
+  <path d="M80 26c-10 11-10 24 0 36 10-12 10-25 0-36z" fill="#47f0a9"/>
+  <path d="M80 33v27" stroke="#071126" stroke-width="2" stroke-linecap="round"/>
+  <text x="80" y="88" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="12" font-weight="800">RICE MILL</text>
+</svg>
