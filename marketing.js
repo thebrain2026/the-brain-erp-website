@@ -989,7 +989,9 @@ document.addEventListener("keydown", (event) => {
 form?.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = Object.fromEntries(new FormData(form).entries());
-  const text = `Demo lead ready: ${data.name}, ${data.location}, ${data.phone}, ${data.size}.`;
-  message.textContent = text;
-  navigator.clipboard?.writeText(text).catch(() => {});
+  const text = `Demo request from The Brain ERP website:%0AName: ${data.name}%0ALocation: ${data.location}%0APhone: ${data.phone}%0AFarm size: ${data.size}`;
+  const plainText = `Demo request from The Brain ERP website: Name: ${data.name}, Location: ${data.location}, Phone: ${data.phone}, Farm size: ${data.size}.`;
+  message.textContent = "Your demo request is ready. WhatsApp will open now.";
+  navigator.clipboard?.writeText(plainText).catch(() => {});
+  window.open(`https://wa.me/919046699442?text=${text}`, "_blank", "noopener");
 });
