@@ -14,6 +14,8 @@ const bnTranslations = {
   "Book Free Demo": "ফ্রি ডেমো বুক করুন",
   "Open ERP App": "ERP অ্যাপ খুলুন",
   "Prepare Demo Message": "ডেমো মেসেজ তৈরি করুন",
+  "Send Demo Request": "ডেমো অনুরোধ পাঠান",
+  "Sending request...": "অনুরোধ পাঠানো হচ্ছে...",
   "About The Brain": "The Brain সম্পর্কে",
   "A famous IT company building AI-based ERP software for every business": "প্রতিটি ব্যবসার জন্য এআই-ভিত্তিক ইআরপি সফটওয়্যার তৈরি করা একটি বিখ্যাত আইটি কোম্পানি",
   "The Brain is an IT-based software company that develops powerful, practical, and AI-supported management systems for different industries. From schools and farms to factories and mills, The Brain builds software that helps businesses control their full operation with clarity, speed, and confidence.": "দ্য ব্রেইন একটি আইটি-ভিত্তিক সফটওয়্যার কোম্পানি, যারা বিভিন্ন ইন্ডাস্ট্রির জন্য শক্তিশালী, ব্যবহারিক এবং এআই-সহায়ক ম্যানেজমেন্ট সিস্টেম তৈরি করে। স্কুল ও ফার্ম থেকে ফ্যাক্টরি ও মিল পর্যন্ত, দ্য ব্রেইন এমন সফটওয়্যার তৈরি করে যা ব্যবসাকে পরিষ্কার ধারণা, দ্রুততা এবং আত্মবিশ্বাসের সঙ্গে সম্পূর্ণ অপারেশন নিয়ন্ত্রণ করতে সাহায্য করে।",
@@ -435,6 +437,8 @@ const orTranslations = {
   "Demo request": "ଡେମୋ ଅନୁରୋଧ",
   "Tell us about the farm": "ଆପଣଙ୍କ ଫାର୍ମ ବିଷୟରେ କହନ୍ତୁ",
   "Prepare Demo Message": "ଡେମୋ ମେସେଜ୍ ପ୍ରସ୍ତୁତ କରନ୍ତୁ",
+  "Send Demo Request": "ଡେମୋ ଅନୁରୋଧ ପଠାନ୍ତୁ",
+  "Sending request...": "ଅନୁରୋଧ ପଠାଯାଉଛି...",
   "Farm Owner Name": "ଫାର୍ମ ମାଲିକଙ୍କ ନାମ",
   "Location": "ଲୋକେସନ୍",
   "Phone Number": "ଫୋନ୍ ନମ୍ବର",
@@ -531,6 +535,8 @@ const teTranslations = {
   "Demo request": "డెమో అభ్యర్థన",
   "Tell us about the farm": "మీ ఫార్మ్ గురించి చెప్పండి",
   "Prepare Demo Message": "డెమో మెసేజ్ సిద్ధం చేయండి",
+  "Send Demo Request": "డెమో అభ్యర్థన పంపండి",
+  "Sending request...": "అభ్యర్థన పంపుతోంది...",
   "Farm Owner Name": "ఫార్మ్ యజమాని పేరు",
   "Location": "లొకేషన్",
   "Phone Number": "ఫోన్ నంబర్",
@@ -989,9 +995,34 @@ document.addEventListener("keydown", (event) => {
 form?.addEventListener("submit", (event) => {
   event.preventDefault();
   const data = Object.fromEntries(new FormData(form).entries());
-  const text = `Demo request from The Brain ERP website:%0AName: ${data.name}%0ALocation: ${data.location}%0APhone: ${data.phone}%0AFarm size: ${data.size}`;
-  const plainText = `Demo request from The Brain ERP website: Name: ${data.name}, Location: ${data.location}, Phone: ${data.phone}, Farm size: ${data.size}.`;
-  message.textContent = "Your demo request is ready. WhatsApp will open now.";
-  navigator.clipboard?.writeText(plainText).catch(() => {});
-  window.open(`https://wa.me/919046699442?text=${text}`, "_blank", "noopener");
+  const submitButton = form.querySelector("button[type='submit']");
+  const originalText = submitButton?.textContent || "Send Demo Request";
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending request...";
+  }
+  message.textContent = "Sending your demo request to The Brain team...";
+
+  fetch("/api/demo-request", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  })
+    .then(async (response) => {
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.ok) {
+        throw new Error(result.message || "Demo request could not be sent.");
+      }
+      form.reset();
+      message.textContent = result.message || "Demo request sent. The Brain team will call you soon.";
+    })
+    .catch((error) => {
+      message.textContent = error.message || "Demo request could not be sent. Please call 9046699442.";
+    })
+    .finally(() => {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
+      }
+    });
 });

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Developer Leads - The Brain ERP</title>
+    <link rel="icon" href="the-brain-favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="marketing.css" />
+  </head>
+  <body>
+    <main class="lead-admin-page">
+      <section class="lead-admin-panel">
+        <p class="eyebrow">Developer access</p>
+        <h1>The Brain Demo Requests</h1>
+        <p>Enter the private developer password to view demo requests submitted from the website.</p>
+        <form id="leadLoginForm" class="contact-form">
+          <label>Password<input name="password" type="password" required placeholder="Developer password" /></label>
+          <button class="primary-action" type="submit">Open Lead Inbox</button>
+          <p class="form-message" id="leadStatus" role="status"></p>
+        </form>
+        <div class="lead-list" id="leadList" aria-live="polite"></div>
+      </section>
+    </main>
+    <script>
+      const leadForm = document.querySelector("#leadLoginForm");
+      const leadStatus = document.querySelector("#leadStatus");
+      const leadList = document.querySelector("#leadList");
+
+      function escapeHtml(value) {
+        return String(value || "").replace(/[&<>"']/g, (char) => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          '"': "&quot;",
+          "'": "&#039;"
+        }[char]));
+      }
+
+      leadForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        leadStatus.textContent = "Loading demo requests...";
+        leadList.innerHTML = "";
+        const password = new FormData(leadForm).get("password");
+
+        try {
+          const response = await fetch(`/api/demo-request?password=${encodeURIComponent(password)}`);
+          const result = await response.json();
+          if (!response.ok || !result.ok) throw new Error(result.message || "Could not open lead inbox.");
+
+          leadStatus.textContent = `${result.leads.length} demo request found.`;
+          leadList.innerHTML = result.leads.map((lead) => `
+            <article class="lead-card">
+              <span>#${lead.id} · ${new Date(lead.createdAt).toLocaleString("en-IN")}</span>
+              <h2>${escapeHtml(lead.title)}</h2>
+              <pre>${escapeHtml(lead.body)}</pre>
+              <a class="secondary-action" href="${lead.url}" target="_blank" rel="noopener">Open Record</a>
+            </article>
+          `).join("");
+        } catch (error) {
+          leadStatus.textContent = error.message || "Could not load demo requests.";
+        }
+      });
+    </script>
+  </body>
+</html>

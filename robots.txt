@@ -1,4 +1,6 @@
 User-agent: *
+Disallow: /developer-leads.html
+Disallow: /api/
 Allow: /
 
 Sitemap: https://www.thebrainerp.com/sitemap.xml
