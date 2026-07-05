@@ -137,6 +137,8 @@ const bnTranslations = {
   "Below 10,000 birds": "১০,০০০ পাখির নিচে",
   "10,000 - 50,000 birds": "১০,০০০ - ৫০,০০০ পাখি",
   "50,000+ birds": "৫০,০০০+ পাখি",
+  "50,000 - 1,00,000 birds": "৫০,০০০ - ১,০০,০০০ পাখি",
+  "1,00,000+ birds": "১,০০,০০০+ পাখি",
   "About The Brain - LayerX Pro ERP": "The Brain সম্পর্কে - LayerX Pro ERP",
   "AI software for practical farm business control": "প্র্যাক্টিক্যাল ফার্ম ব্যবসা নিয়ন্ত্রণের জন্য AI সফটওয়্যার",
   "The Brain develops LayerX Pro ERP to help poultry farm owners move from scattered notebooks and manual calculations to a professional, data-driven operating system.": "The Brain পোলট্রি ফার্ম মালিকদের ছড়ানো খাতা ও ম্যানুয়াল হিসাব থেকে পেশাদার ডেটা-ড্রিভেন অপারেটিং সিস্টেমে যেতে সাহায্য করার জন্য LayerX Pro ERP তৈরি করে।",
