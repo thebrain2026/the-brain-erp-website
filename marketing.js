@@ -1014,7 +1014,7 @@ form?.addEventListener("submit", (event) => {
         throw new Error(result.message || "Demo request could not be sent.");
       }
       form.reset();
-      message.textContent = result.message || "Demo request sent. The Brain team will call you soon.";
+      message.textContent = result.message || "Your request has been saved. Our sales and service team will contact you soon. Please feel free to speak with them.";
     })
     .catch((error) => {
       message.textContent = error.message || "Demo request could not be sent. Please call 9046699442.";

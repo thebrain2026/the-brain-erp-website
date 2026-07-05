@@ -104,7 +104,7 @@ module.exports = async function handler(request, response) {
       }
 
       await createGithubIssue(data);
-      return sendJson(response, 200, { ok: true, message: "Demo request saved. The Brain team will call back soon." });
+      return sendJson(response, 200, { ok: true, message: "Your request has been saved. Our sales and service team will contact you soon. Please feel free to speak with them." });
     } catch (error) {
       return sendJson(response, 500, { ok: false, message: error.message || "Request could not be saved." });
     }
