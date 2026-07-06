@@ -1146,9 +1146,211 @@ h3 {
 }
 
 .mobile-control-grid {
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
+}
+
+.mobile-app-preview {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-app-shell {
+  width: min(390px, 100%);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 28px;
+  padding: 18px;
+  background: linear-gradient(180deg, #f6fbf8, #eef6f1);
+  color: #132033;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42), 0 0 0 10px rgba(255, 255, 255, 0.04);
+}
+
+.mobile-app-topbar {
+  display: grid;
+  grid-template-columns: 52px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.mobile-menu-lines {
+  width: 52px;
+  height: 52px;
+  border: 1px solid #d7e8e2;
+  border-radius: 10px;
+  background:
+    linear-gradient(#28675e, #28675e) 50% 34% / 24px 3px no-repeat,
+    linear-gradient(#28675e, #28675e) 50% 50% / 24px 3px no-repeat,
+    linear-gradient(#28675e, #28675e) 50% 66% / 24px 3px no-repeat,
+    #ffffff;
+  box-shadow: 0 10px 22px rgba(31, 72, 62, 0.12);
+}
+
+.mobile-app-topbar small,
+.mobile-status {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: #e7f5ee;
+  color: #287062;
+  font-weight: 900;
+}
+
+.mobile-app-topbar strong {
+  display: block;
+  margin-top: 5px;
+  color: #0e1726;
+  font-size: 1.55rem;
+}
+
+.mobile-weather-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  padding: 22px;
+  background: linear-gradient(135deg, #4ca77f, #3a84de);
+  color: #ffffff;
+}
+
+.mobile-weather-card span,
+.mobile-weather-card p {
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 850;
+}
+
+.mobile-weather-card strong {
+  display: block;
+  margin: 8px 0;
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 1.05;
+}
+
+.mobile-weather-card p {
+  max-width: 270px;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.mobile-weather-card em {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.18);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.mobile-shed-panel {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+  border-radius: 16px;
+  padding: 16px;
+  background: #ffffff;
+  box-shadow: 0 14px 34px rgba(28, 62, 52, 0.12);
+}
+
+.mobile-panel-head,
+.mobile-shed-panel article > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.mobile-panel-head strong {
+  color: #0f1828;
+  font-size: 1.12rem;
+}
+
+.mobile-panel-head span {
+  color: #7a3445;
+  font-weight: 900;
+}
+
+.mobile-shed-panel article {
+  display: grid;
+  gap: 12px;
+  border: 1px solid #dbeae5;
+  border-radius: 14px;
+  padding: 13px;
+  background: #f7fcf9;
+}
+
+.mobile-shed-panel article strong {
+  color: #23695c;
+  font-size: 1.08rem;
+}
+
+.mobile-shed-panel article div span {
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: #eaf7f1;
+  color: #23695c;
+  font-weight: 900;
+}
+
+.mobile-shed-panel ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-shed-panel li {
+  display: grid;
+  gap: 5px;
+  min-height: 74px;
+  border: 1px solid #e2e8e6;
+  border-radius: 10px;
+  padding: 10px;
+  background: #ffffff;
+}
+
+.mobile-shed-panel li span {
+  color: #667385;
+  font-size: 0.72rem;
+  font-weight: 900;
+  line-height: 1.12;
+}
+
+.mobile-shed-panel li b {
+  color: #111827;
+  font-size: 1.1rem;
+}
+
+.mobile-bottom-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-top: 14px;
+  border-radius: 16px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 -10px 26px rgba(35, 72, 60, 0.12);
+}
+
+.mobile-bottom-nav span {
+  border-radius: 12px;
+  padding: 12px 6px;
+  color: #667385;
+  text-align: center;
+  font-weight: 900;
+}
+
+.mobile-bottom-nav span:first-child {
+  background: #e6f4ee;
+  color: #23695c;
 }
 
 .mobile-control-grid article {
