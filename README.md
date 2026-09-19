@@ -1,7 +1,15 @@
 # The Brain ERP Website
 
-Static marketing website for The Brain ERP and its software products.
+Local company site for The Brain industry software.
 
-Deploy with Vercel or Netlify. The home page is `index.html`.
+Home is `index.html`. Public hotel name is **Hotel PMS**.
 
-Demo requests from the contact form open WhatsApp for the company phone number.
+Serve locally:
+
+```
+python3 -m http.server 4780 --bind 127.0.0.1
+```
+
+Then open `http://127.0.0.1:4780/`.
+
+Do not deploy live www until Samrat says so.
