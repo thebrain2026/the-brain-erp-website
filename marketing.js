@@ -883,6 +883,9 @@ Object.assign(bnTranslations, {
   "Contact / Demo": "কন্টাক্ট / ডেমো",
   "Industry software. Not a login screen.": "ইন্ডাস্ট্রি সফটওয়্যার। লগইন স্ক্রিন নয়।",
   "The Brain": "দ্য ব্রেইন",
+  "BrainNexus Technology": "ব্রেইননেক্সাস টেকনোলজি",
+  "The Brain is the brand. BrainNexus Technology is the company. Farm, hotel, school, gym, trading, transport, boiler, mills, and factory machine health — each product is its own software. Open a product page and you will see every facility you get if you use it.": "দ্য ব্রেইন ব্র্যান্ড। ব্রেইননেক্সাস টেকনোলজি কোম্পানি। ফার্ম, হোটেল, স্কুল, জিম, ট্রেডিং, ট্রান্সপোর্ট, বয়লার, মিল আর ফ্যাক্টরি মেশিন হেলথ — প্রতিটা প্রোডাক্ট আলাদা সফটওয়্যার। পেজ খুলুন, ব্যবহার করলে কী পাবেন দেখুন।",
+  "BrainNexus Technology. Name, location, phone, product. Sales calls back with that demo.": "ব্রেইননেক্সাস টেকনোলজি। নাম, লোকেশন, ফোন, প্রোডাক্ট। সেলস সেই ডেমো নিয়ে ফোন করবে।",
   "Ten software products": "দশটি সফটওয়্যার প্রোডাক্ট",
   "Hotel PMS": "হোটেল পিএমএস",
   "School management": "স্কুল ম্যানেজমেন্ট",
@@ -1017,6 +1020,10 @@ Object.assign(bnTranslations, {
   "Open Factory OHS": "ফ্যাক্টরি ওএইচএস খুলুন",
   "Ask for the product you want": "যে প্রোডাক্ট চান সেটা বলুন",
   "Name, location, phone, which software. Samrat Hazra · 9046699442 · info@thebrainerp.com": "নাম, লোকেশন, ফোন, কোন সফটওয়্যার। সম্রাট হাজরা · ৯০৪৬৬৯৯৪৪২ · info@thebrainerp.com",
+  "Name, location, phone, which software. Samrat Hazra · Helpline 7699123366 · Director 9046699442 · info@thebrainerp.com": "নাম, লোকেশন, ফোন, কোন সফটওয়্যার। সম্রাট হাজরা · হেল্পলাইন ৭৬৯৯১২৩৩৬৬ · ডিরেক্টর ৯০৪৬৬৯৯৪৪২ · info@thebrainerp.com",
+  "Tell us which software. We will call you. Helpline 7699123366 · Director 9046699442 · info@thebrainerp.com": "কোন সফটওয়্যার বলুন। আমরা ফোন করব। হেল্পলাইন ৭৬৯৯১২৩৩৬৬ · ডিরেক্টর ৯০৪৬৬৯৯৪৪২ · info@thebrainerp.com",
+  "Helpline": "হেল্পলাইন",
+  "Director": "ডিরেক্টর",
   "Your name": "আপনার নাম",
   "Which software": "কোন সফটওয়্যার",
   "Select a product": "প্রোডাক্ট বেছে নিন",
@@ -1603,7 +1610,7 @@ form?.addEventListener("submit", (event) => {
       message.textContent = result.message || "Your request has been saved. Our sales and service team will contact you soon. Please feel free to speak with them.";
     })
     .catch((error) => {
-      message.textContent = error.message || "Demo request could not be sent. Please call 9046699442.";
+      message.textContent = error.message || "Demo request could not be sent. Please call helpline 7699123366 or director 9046699442.";
     })
     .finally(() => {
       if (submitButton) {

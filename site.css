@@ -494,6 +494,15 @@ body.brain-site {
   font-weight: 500;
 }
 
+.brain-footer .footer-company {
+  margin: -8px 0 0;
+  color: var(--mute);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .footer-products { display: flex; flex-wrap: wrap; gap: 8px 16px; }
 .footer-products a { color: var(--mute); font-size: 0.88rem; }
 .footer-products a:hover { color: var(--gold); }
@@ -573,32 +582,28 @@ body.brain-site {
   --panel: #1b1711;
 }
 
-/* Homepage hero + product grid only: royal blue instead of matte black. Serif fonts unchanged. */
+/* Homepage hero + product grid: one strong royal blue (no fade, no two-tone). Serif unchanged. Hotel/OHS climates not touched. */
 body.climate-home:has(.home-hero) .brain-header {
-  background: rgba(8, 22, 72, 0.92);
+  background: rgba(12, 40, 168, 0.94);
 }
 body.climate-home:has(.home-hero) .nav-products-panel {
-  background: #0c1a52;
+  background: #1239c2;
 }
 body.climate-home:has(.home-hero) .brain-logo img {
-  background: #0a1b54;
+  background: #1239c2;
 }
 
 .home-hero,
 #products {
-  background:
-    radial-gradient(1100px 480px at 10% -18%, rgba(70, 120, 230, 0.32), transparent 55%),
-    linear-gradient(180deg, #16368a 0%, #0d2468 50%, #0a1b54 100%);
+  background: #1546d0;
 }
 
 .home-hero .morning-board {
-  background:
-    linear-gradient(180deg, rgba(212, 160, 23, 0.10), transparent 42%),
-    #173781;
+  background: #1239c2;
 }
 
-#products .product-card { background: #143070; }
-#products .product-card:hover { background: #1b3c88; }
+#products .product-card { background: #1b4de0; }
+#products .product-card:hover { background: #2460f0; }
 
 /* —— Product climates —— */
 
@@ -1530,6 +1535,75 @@ body.climate-home:has(.home-hero) .brain-logo img {
 .climate-hotel .who-grid article,
 .climate-paper .facility-grid article,
 .climate-paper .who-grid article { background: #f7edd8; }
+
+/* Tech-company surface: sharp grids, precise type, live boards. Palettes unchanged. */
+.brain-site h3 {
+  font-family: var(--sans);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.brain-site .lead {
+  line-height: 1.5;
+  font-size: 1.02rem;
+}
+
+.product-card .idx {
+  font-family: var(--mono);
+  font-style: normal;
+  letter-spacing: 0.16em;
+}
+
+.kpi strong,
+.dash,
+.ohs-console {
+  font-variant-numeric: tabular-nums;
+}
+
+.dash {
+  border-radius: 0;
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.facility-grid,
+.who-grid {
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.facility-grid article,
+.who-grid article {
+  border: 0;
+  border-radius: 0;
+}
+
+.room-rack,
+.batch-board,
+.trip-board,
+.blotter {
+  gap: 1px;
+  background: var(--line);
+}
+
+.home-hero,
+#products {
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 72px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 72px),
+    #1546d0;
+}
+
+.shed-board b,
+.gym-floor b {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
 
 @media (max-width: 1100px) {
   .product-split { grid-template-columns: 1fr; }
