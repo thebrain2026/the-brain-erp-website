@@ -593,8 +593,7 @@ body.climate-home:has(.home-hero) .brain-logo img {
   background: #1239c2;
 }
 
-.home-hero,
-#products {
+.home-hero {
   background: #1546d0;
 }
 
@@ -602,8 +601,36 @@ body.climate-home:has(.home-hero) .brain-logo img {
   background: #1239c2;
 }
 
-#products .product-card { background: #1b4de0; }
-#products .product-card:hover { background: #2460f0; }
+#products {
+  background: #0b1638;
+}
+
+#products .product-grid {
+  gap: 14px;
+  background: transparent;
+  border: 0;
+}
+
+#products .product-card {
+  background: #121e4a;
+  border: 1px solid rgba(200, 214, 255, 0.16);
+  border-radius: 12px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.1) inset,
+    0 8px 18px rgba(0, 0, 0, 0.42),
+    0 2px 4px rgba(0, 0, 0, 0.28);
+  transform: translateY(0);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+#products .product-card:hover {
+  background: #182656;
+  transform: translateY(-7px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.14) inset,
+    0 18px 34px rgba(0, 0, 0, 0.52),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
 /* —— Product climates —— */
 
@@ -1587,8 +1614,7 @@ body.climate-home:has(.home-hero) .brain-logo img {
   background: var(--line);
 }
 
-.home-hero,
-#products {
+.home-hero {
   background:
     repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 72px),
     repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 72px),
