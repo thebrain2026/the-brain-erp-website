@@ -508,6 +508,7 @@ body.brain-site {
 .footer-products a:hover { color: var(--gold); }
 .footer-contact { color: var(--mute); }
 .footer-contact a { color: var(--gold); }
+.footer-address { color: var(--mute); margin: 0; }
 
 .product-hero,
 .about-hero {
