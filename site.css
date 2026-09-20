@@ -633,6 +633,29 @@ body.climate-home:has(.home-hero) .brain-logo img {
     0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+#products .ecosystem-note {
+  display: grid;
+  gap: 8px;
+  margin: 6px 0 26px;
+  max-width: 46rem;
+}
+
+#products .ecosystem-note .lead {
+  margin: 0;
+  max-width: none;
+  color: var(--ink);
+}
+
+#products .ecosystem-note p {
+  margin: 0;
+  color: var(--mute);
+  line-height: 1.55;
+}
+
+#products .ecosystem-note .practice {
+  font-size: 0.92rem;
+}
+
 /* —— Product climates —— */
 
 .climate-hotel {
